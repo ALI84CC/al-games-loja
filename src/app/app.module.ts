@@ -24,6 +24,7 @@ import { CadastroProdutoComponent } from './restrito/cadastro-produto/cadastro-p
 import { ListaProdutoComponent } from './restrito/lista-produto/lista-produto.component';
 import { MenuProdutoComponent } from './restrito/menu-produto/menu-produto.component';
 import { ProdutoComponent } from './produto/produto.component';
+import { MenuRegistroComponent } from './restrito/menu-registro/menu-registro.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { ProdutoComponent } from './produto/produto.component';
     CadastroProdutoComponent,
     ListaProdutoComponent,
     MenuProdutoComponent,
-    ProdutoComponent
+    ProdutoComponent,
+    MenuRegistroComponent
   ],
   imports: [
     BrowserModule,
