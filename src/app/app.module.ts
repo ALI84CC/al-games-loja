@@ -55,6 +55,9 @@ import { MenuRegistroComponent } from './restrito/menu-registro/menu-registro.co
     MatInputModule,
     MatMenuModule,
     MatToolbarModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
