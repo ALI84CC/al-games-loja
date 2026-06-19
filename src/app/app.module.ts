@@ -14,6 +14,7 @@ import {MatMenuModule} from '@angular/material/menu';
 import {MatToolbarModule} from '@angular/material/toolbar';
 
 import { AppRoutingModule } from './app-routing.module';
+import { RestritoRoutingModule } from './restrito/restrito-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { InicioComponent } from './inicio/inicio.component';
@@ -24,24 +25,19 @@ import { RestritoComponent } from './restrito/restrito.component';
 import { AtualizaProdutoComponent } from './restrito/atualiza-produto/atualiza-produto.component';
 import { CadastroProdutoComponent } from './restrito/cadastro-produto/cadastro-produto.component';
 import { ListaProdutoComponent } from './restrito/lista-produto/lista-produto.component';
-import { MenuProdutoComponent } from './restrito/menu-produto/menu-produto.component';
-import { ProdutoComponent } from './produto/produto.component';
 import { MenuRegistroComponent } from './restrito/menu-registro/menu-registro.component';
-
 @NgModule({
   declarations: [
-    AppComponent,
-    InicioComponent,
-    LoginComponent,
-    MenuComponent,
-    RodapeComponent,
-    RestritoComponent,
-    AtualizaProdutoComponent,
-    CadastroProdutoComponent,
-    ListaProdutoComponent,
-    MenuProdutoComponent,
-    ProdutoComponent,
-    MenuRegistroComponent
+  AppComponent,
+  InicioComponent,
+  LoginComponent,
+  MenuComponent,
+  RodapeComponent,
+  RestritoComponent,
+  AtualizaProdutoComponent,
+  CadastroProdutoComponent,
+  ListaProdutoComponent,
+ MenuRegistroComponent
   ],
   imports: [
     BrowserModule,
@@ -55,6 +51,7 @@ import { MenuRegistroComponent } from './restrito/menu-registro/menu-registro.co
     MatInputModule,
     MatMenuModule,
     MatToolbarModule,
+    RestritoRoutingModule,
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule

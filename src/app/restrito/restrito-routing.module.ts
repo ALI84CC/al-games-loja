@@ -1,19 +1,26 @@
 import { NgModule } from "@angular/core";
-import { InicioComponent } from "../inicio/inicio.component";
-import { LoginComponent } from "../login/login.component";
-import { RestritoComponent } from "./restrito.component";
 import { RouterModule, Routes } from "@angular/router";
+import { CadastroProdutoComponent } from "./cadastro-produto/cadastro-produto.component";
+import { ListaProdutoComponent } from "./lista-produto/lista-produto.component";
+import {AtualizaProdutoComponent} from "./atualiza-produto/atualiza-produto.component";
+import { RestritoComponent } from "./restrito.component";
 
-const routes: Routes = [
-    {path:'restrito', component: RestritoComponent},
-    {path:'login',component: LoginComponent},
-    {path:'inicio',component: InicioComponent},
-    {path:'', redirectTo:'/inicio', pathMatch:'full'}
+
+const restritoRoutes: Routes = [
+    {
+        path: 'restrito', component: RestritoComponent, children:[
+            {path:'cadastro',component: CadastroProdutoComponent},
+            {path:'lista',component: ListaProdutoComponent},
+            {path:'atualiza/:id',component: AtualizaProdutoComponent},
+        ]
+    },
+  
+    {path:'', redirectTo:'/restrito/lista', pathMatch:'full'}
 ]
 
 @NgModule({
-    imports: [RouterModule.forRoot(routes)],
+    imports: [RouterModule.forChild(restritoRoutes)],
     exports: [RouterModule]
 })
 
-export class AppRoutingModule { }
+export class  RestritoRoutingModule { }
