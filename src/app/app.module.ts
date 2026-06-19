@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 /*Importações Angular Material*/
 import {MatButtonModule} from '@angular/material/button';
@@ -52,7 +54,7 @@ import { MenuRegistroComponent } from './restrito/menu-registro/menu-registro.co
     MatIconModule,
     MatInputModule,
     MatMenuModule,
-    MatToolbarModule
+    MatToolbarModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
