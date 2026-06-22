@@ -21,13 +21,13 @@ export class InicioComponent implements OnInit {
         retornaProduto => {
           this.produtos = retornaProduto.map(
             item => {
-            return new Produto(
-              item.id,
-              item.nome,
-              item.descricao,
-              item.foto,
-              item.preco
-            );
+           return new Produto(
+             item.id,
+             item.nome,
+             item.descricao,
+             item.foto,
+             item.preco,
+           )
           });
         }
       );
