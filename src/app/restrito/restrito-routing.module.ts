@@ -4,14 +4,15 @@ import { CadastroProdutoComponent } from "./cadastro-produto/cadastro-produto.co
 import { ListaProdutoComponent } from "./lista-produto/lista-produto.component";
 import {AtualizaProdutoComponent} from "./atualiza-produto/atualiza-produto.component";
 import { RestritoComponent } from "./restrito.component";
+import { guardGuard } from "../guard.guard"
 
 
 const restritoRoutes: Routes = [
     {
         path: 'restrito', component: RestritoComponent, children:[
-            {path:'cadastro',component: CadastroProdutoComponent},
-            {path:'lista',component: ListaProdutoComponent},
-            {path:'atualiza/:id',component: AtualizaProdutoComponent},
+            {path:'cadastro',component: CadastroProdutoComponent, canActivate:[guardGuard]},
+            {path:'lista',component: ListaProdutoComponent, canActivate:[guardGuard]},
+            {path:'atualiza/:id',component: AtualizaProdutoComponent, canActivate:[guardGuard]},
         ]
     },
   

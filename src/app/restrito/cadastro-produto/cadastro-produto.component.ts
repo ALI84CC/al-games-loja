@@ -15,8 +15,8 @@ export class CadastroProdutoComponent {
 
   cadastrar():void{
 
-     const { id, ...dadosParaEnviar } = this.produto;
-     
+    const { id, ...dadosParaEnviar } = this.produto;
+
     this._produtoService.cadastrarProduto(this.produto).subscribe(
       produto => {
         this.produto = new Produto(0,"","","",0)
