@@ -5,21 +5,28 @@
             <label for="produto">Nome do
             Produto</label>
             <input type="text" class="form-control"
-            name="produto">
+            name="produto"
+            [(ngModel)] ="produto.nome">
             <br>
             <label for="descricao">Descrição</label>
             <input type="text" class="form-control"
-            name="descricao">
+            name="descricao"
+            [(ngModel)] ="produto.descricao">
             <br>
             <label for="foto">Foto</label>
-            <input type="text" class="form-control"
-            name="foto">
+            <input type="file" class="form-control"
+            name="foto"
+            (change)="aoSelecionarFoto($event)">
             <br>
             <label for="preco">Preço</label>
             <input type="number" class="form-control"
-            name="preco">
+            name="preco"
+            [(ngModel)] ="produto.preco">
             <br>
-            <button type="button" class="btn btnprimary mb-3">Cadastrar</button>
+            <button type="button" class="btn btnprimary mb-3"
+            (click) = "cadastrar()">
+            Cadastrar
+            </button>
         </form>
     </section>
 </main>

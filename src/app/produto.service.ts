@@ -19,7 +19,7 @@ export class ProdutoService {
     return this._httpClient.get<Produto[]>(this.url);
   }
 
-  cadastrarProduto(produto:Produto): Observable<Produto[]>{
+  cadastrarProduto(produto: Omit<Produto, 'id'>): Observable<Produto[]>{
     return this._httpClient.post<Produto[]>(this.url, produto);
   }
 
@@ -28,9 +28,9 @@ export class ProdutoService {
     return this._httpClient.put<Produto[]>(urlAtualizar, produto);
   }
 
-  removerProduto(id:any): Observable<Produto[]>{
-     const urlRemover = `${this.url}?id=${id}`;
-     return this._httpClient.delete<Produto[]>(urlRemover);
+  removerProduto(id:any): Observable<any>{
+     const urlRemover = `${this.url}/${id}`;
+     return this._httpClient.delete<any>(urlRemover);
     }
   }  
 
